@@ -1,14 +1,197 @@
 <script>
-function createMyObject() {
-  return {
-    foo: 'bar',
-    answerToUniverse: 42,
-    "olly olly": 'oxen free',
-    sayHello:function() {
-      return "hello";
+// function createMyObject() {
+//   return {
+//     foo: 'bar',
+//     answerToUniverse: 42,
+//     "olly olly": 'oxen free',
+//     sayHello:function() {
+//       return "hello";
+//     }
+//   };
+// }
+
+// function updateObject(obj) {
+//   obj.foo = 'foo';
+//   obj.bar = 'bar';
+//   obj.bizz = 'bizz';
+//   obj.bang = 'bang';
+//   return obj;
+
+// function personMaker() {
+// var person = {
+//     firstName: 'Paul',
+//     lastName: 'Jones',
+//     // replace `null` with a function that uses self reference to return
+//     // full name
+//     fullName: function() {
+//       return this.firstName + " " + this.lastName;
+//     }
+//   };
+//   return person;
+// }
+
+// function keyDeleter(obj) {
+//   delete obj.foo;
+//   delete obj.bar;
+//   return obj;
+// }
+
+// var sampleObj = {
+//   foo: 'foo',
+//   bar: 'bar',
+//   bizz: 'bizz',
+//   bang: 'bang'
+// };
+
+// function mostFrequentWord(words) {
+//   var freq = {};
+  
+//   for (var i = 0; i <= words.length; i++) {
+//     if (words[i] in freq) {
+//       freq[words[i]]++ ;
+//     }
+//     else {
+//       freq[words[i]] = 1;
+//     }
+
+//   }
+//   var maxKey = Object.keys(freq)[0];
+//   var maxCount = freq[maxKey];
+  
+//   for (var word in freq) {
+//     if (freq[word] > maxCount) {
+//       maxKey = word;
+//       maxCount = freq[word];
+//     }
+//   }
+//   console.log(maxKey);
+// }
+
+// var words = ["Today", "is", "a", "good", "Today", "today", "is"];
+
+// mostFrequentWord(words);
+
+// function mergeDataStreams(stream1, stream2) {
+//   for (var key in stream2) {
+//     if (stream2.hasOwnProperty(key)) stream1[key] = stream2[key];
+//   }
+//   console.log(stream1);
+// }
+
+// var one = {
+//   id: 'aBcDeFgH',
+//   firstName: 'Juan',
+//   lastName: 'Doe',
+//   age: 32
+// };
+
+// var two = {
+//   id: 'aBcDeFgH',
+//   occupation: 'architect',
+//   address: {
+//     street: '123 Main St',
+//     city: 'CityTown',
+//     Country: 'USA'
+//   }
+// };
+
+// mergeDataStream(one, two); 
+
+
+// var loaf = {
+//   flour: 300,
+//   water: 210,
+//   hydration: function(){
+//     return uloaf.water / loaf.flour * 100;
+//   }
+  
+// };
+
+// console.log(loaf.flour);
+// console.log(loaf.water);
+// console.log(loaf.hydration(loaf));
+
+//iterating over object properties//
+
+// var booz = {
+//   foo: "Guy",
+//   bar: 2,
+//   fum: "bum",
+//   quuz: "37",
+//   spam: "Is terrible"
+// };
+
+// for (var i in booz) {
+//     console.log(i, '=', booz[i]);
+// }
+
+//arrays in objects//
+
+// var stuff = {
+//   meals: ['breakfast', 'second brekfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+// };
+
+// console.log(stuff.meals[3]);
+
+//Arrays of Objects//
+
+var employee1 = {
+  name: "Steve",
+  title: "Owner"
+};
+
+var employee2 = {
+  name: "Marissa",
+  title: "CFO"
+};
+
+var employee3 = {
+  name: "Brenda",
+  title: "90210 Lacky"
+};
+
+var array = [employee1, employee2, employee3];
+
+array.forEach( function (numbers) {
+   var x = numbers.name;
+   var y = numbers.title;
+    console.log(x + " " + y);
+});
+
+//Properties that aren't there//
+var employee1 = {
+  name: "Steve",
+  title: "Owner"
+};
+
+var employee2 = {
+  name: "Marissa",
+  title: "CFO",
+  boss: "Steve"
+};
+
+var employee3 = {
+  name: "Brenda",
+  title: "90210 Lacky",
+  boss: "Marissa"
+};
+
+var array = [employee1, employee2, employee3];
+
+array.forEach( function (numbers) {
+   var x = numbers.name;
+   var y = numbers.title;
+   var n = numbers.boss;
+    if (n === undefined) {
+      console.log(y + " " + x + "Does not report to anyone");
     }
-  };
-}
+    else {
+    console.log(y + " " + x + "Reports to " + n);
+    }
+});
+
+
+
 
 
 
