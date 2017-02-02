@@ -190,6 +190,32 @@ array.forEach( function (numbers) {
     }
 });
 
+// Cracking th code //
+var code = {
+   a: 1,
+   b: 2,
+   c: 3,
+   d: 4
+};
+
+function crack(solution) {
+  var winner= [];
+  var decoded = code[solution[0]];  
+  var money = solution[decoded];
+  winner = money;
+  console.log(winner);
+  
+
+}
+  crack("craft")
+  crack("block")
+  crack("argon")
+  crack("meter")
+  crack("bells")
+  crack("brown")
+  crack("croon")
+  crack("droop");
+
 
 
 
